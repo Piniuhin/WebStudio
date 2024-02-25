@@ -1,0 +1,19 @@
+.header {
+  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: var(--primary-white-color);
+  border-bottom: 1px solid var(--gray-header-border);
+  background-color: var(--primary-white-color);
+
+  z-index: 5;
+}
+
+// @media (min-width: 1200px) {
+//   .header__container {
+//     display: flex;
+//     align-items: center;
+//   }
+// }

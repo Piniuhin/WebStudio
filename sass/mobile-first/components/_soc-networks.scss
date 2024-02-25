@@ -1,0 +1,30 @@
+.soc-networks {
+  display: flex;
+  margin-top: 16px;
+  justify-content: center;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}
+
+.soc-networks__link {
+  @extend %flex-center-elem;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+
+  color: var(--icon-soc-networks-color);
+  transition: color var(--transition-standart), background-color var(--transition-standart);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-blue-color);
+    color: var(--primary-white-color);
+  }
+}

@@ -1,0 +1,103 @@
+.button {
+  font-family: inherit;
+
+  color: var(--primary-white-color);
+  background-color: var(--accent-blue-color);
+  transition: background-color var(--transition-standart);
+}
+
+.button-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &__item {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: 481px) {
+    justify-content: center;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+
+.button-list__button {
+  padding: 6px 22px;
+  @include font(500, 16px, 1.62, 0.03em, center);
+  color: var(--secondary-black-color);
+
+  background-color: var(--gray-background);
+
+  transition: background-color var(--transition-standart), color var(--transition-standart),
+    box-shadow var(--transition-standart);
+
+  &:hover,
+  &:focus {
+    color: var(--primary-white-color);
+    background-color: var(--accent-blue-color);
+
+    box-shadow: 0px 2px 2px 0px #0000001f, 0px 1px 2px 0px #00000014, 0px 3px 1px 0px #0000001a;
+  }
+}
+
+/* -----MODAL-BUTTON----- */
+
+.modal-button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  padding: 10px 52px;
+
+  @include font(700, 16px, 1.88, 0.06em);
+  color: var(--primary-white-color);
+
+  background-color: var(--accent-blue-color);
+  box-shadow: 0px 4px 4px 0px #00000026;
+
+  transition: background-color var(--transition-standart);
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-background-color);
+  }
+}
+
+/* ----------FOOTER-BUTTON---------- */
+.subscribe-form__button {
+  margin-left: auto;
+  margin-right: auto;
+  @extend %align-center-elem;
+  padding: 10px 31px;
+
+  @include font(700, 16px, 1.88, 0.06em);
+  box-shadow: 0px 4px 4px 0px #00000026;
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-background-color);
+  }
+
+  @media (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+    padding: 10px 28px;
+  }
+}
+
+.button__icon-plane {
+  @extend %align-center-elem;
+  margin-left: 12px;
+
+  @media (min-width: 1200px) {
+    margin-left: 10px;
+  }
+}

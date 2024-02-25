@@ -1,0 +1,37 @@
+.logo {
+  display: inline-block;
+  color: var(--accent-blue-color);
+
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  @include font(700, 24px, 1.17, 0.03em);
+  text-decoration: none;
+
+  &__word-header {
+    padding: 0;
+    color: var(--full-black-color);
+  }
+
+  &__word-footer {
+    padding: 0;
+    color: var(--primary-white-color);
+  }
+
+  &--footer {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 1200px) {
+    @include font(null, 26px, 1.19, null);
+  }
+}
+
+.main-nav--logo {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media (min-width: 481px) {
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+}

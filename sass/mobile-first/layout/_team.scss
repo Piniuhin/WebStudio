@@ -1,0 +1,62 @@
+.section--team {
+  background-color: var(--gray-background);
+}
+
+.team-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media (min-width: 768px) {
+    margin: -15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .employee:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.employee {
+  @media (max-width: 767px) {
+    max-width: 450px;
+    width: 100%;
+  }
+
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  &__describe {
+    padding-top: 30px;
+    padding-bottom: 24px;
+  }
+
+  &__title,
+  &__job {
+    @include font(400, 16px, 1.18, 0.03em, center);
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--secondary-black-color);
+  }
+
+  @media (min-width: 768px) {
+    margin: 15px;
+    width: calc((100% - 4 * 15px) / 2);
+  }
+}
+
+@media (min-width: 1200px) {
+  .employee {
+    width: calc((100% - 8 * 15px) / 4);
+
+    &__describe {
+      padding-bottom: 30px;
+    }
+  }
+}
